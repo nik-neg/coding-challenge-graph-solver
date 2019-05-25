@@ -136,8 +136,6 @@ def listContainsKey(key, someList):
             return True
     return False
 
-# Counter for the path dictionary initiliazed with one
-z = 0
 # A dictionary, which contains all paths.
 pathDict  = {}
 # A proper path candidate
