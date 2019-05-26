@@ -139,7 +139,6 @@ def listContainsKey(key, someList):
 # A proper path candidate
 minCandidateFromList = candidate.Candidate(0, 0.0, [])
 
-
 # List of node candidates for the shortest path.
 candidateList = []
 
@@ -158,8 +157,6 @@ popedCandList = []
 #         The start node in the edge
 # @param: nextNode
 #         The next node in the edge
-#
-#
 #
 def updateNode(startNode, nextNode):
     global adjDict
