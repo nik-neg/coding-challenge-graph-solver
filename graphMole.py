@@ -265,7 +265,7 @@ def restoreData(shortestPathTuple):
 # To test other path just set the bool variable to False
 # and set the start node in the findShortestPath method
 # to str(node number), e.g.findShortestPath(str(399))
-# and the endPattern to "desired endnode", e.g. endPattern = "755"
+# and the end node to "desired endnode", e.g. end node = "755"
 CODING_CHALLENGE = True
 
 if __name__ == '__main__':
