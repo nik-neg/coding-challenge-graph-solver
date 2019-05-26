@@ -195,11 +195,11 @@ def updateNode(startNode, nextNode):
 #           the key (node) hasn't been handled then the update method is called.
 #
 #
-# @param successorNode
-#        The startNode
+# @param startNode
+#        The start node in the path.
 #
 #
-def findShortestPath(successorNode):
+def findShortestPath(startNode):
     global candidateList
     global minCost
     global z
@@ -211,7 +211,7 @@ def findShortestPath(successorNode):
     nodeList = list(graph.nodes)
     for i in range(0, len(nodeList)):
             candidateList.append(candidate.Candidate(nodeList[i],math.inf, visitedList))
-    candidateList[getIndexOfNode(successorNode, candidateList)] = candidate.Candidate(successorNode, 0.0, visitedList)
+    candidateList[getIndexOfNode(startNode, candidateList)] = candidate.Candidate(startNode, 0.0, visitedList)
     
     while len(candidateList)>0:
         try:
