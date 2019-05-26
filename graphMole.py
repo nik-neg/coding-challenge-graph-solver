@@ -136,8 +136,6 @@ def listContainsKey(key, someList):
             return True
     return False
 
-# A dictionary, which contains all paths.
-pathDict  = {}
 # A proper path candidate
 minCandidateFromList = candidate.Candidate(0, 0.0, [])
 
