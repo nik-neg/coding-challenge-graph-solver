@@ -202,7 +202,6 @@ def updateNode(startNode, nextNode):
 def findShortestPath(startNode):
     global candidateList
     global minCost
-    global z
     global graph
     global endNode
     global minCandidateFromList
