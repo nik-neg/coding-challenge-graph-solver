@@ -221,10 +221,9 @@ def findShortestPath(startNode):
             pass
         popedCandList.append(minCandidateFromList)
         
-        # to handle isolated graph components
         if minCandidateFromList.idNumber not in minCandidateFromList.pathList:
             minCandidateFromList.pathList.append(minCandidateFromList.idNumber)
-        else:
+        else:  # to handle isolated graph components
             minCandidateFromList.pathList  = str("NO PATH")
             minCandidateFromList.pathCosts = math.inf
             break
