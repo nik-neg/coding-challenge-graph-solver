@@ -204,6 +204,11 @@ def findShortestPath(startNode):
     visitedList  = []
     
     nodeList = list(graph.nodes)
+    if (startNode or endNode) not in nodeList:
+        minCandidateFromList.pathList  = str("NO PATH")
+        minCandidateFromList.pathCosts = math.inf
+        return
+    
     for i in range(0, len(nodeList)):
             candidateList.append(candidate.Candidate(nodeList[i],math.inf, visitedList))
     candidateList[getIndexOfNode(startNode, candidateList)] = candidate.Candidate(startNode, 0.0, visitedList)
