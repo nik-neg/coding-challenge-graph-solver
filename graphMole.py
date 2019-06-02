@@ -166,8 +166,7 @@ def updateNode(startNode, nextNode):
     try:
         if candidateList[getIndexOfNode(nextNode, candidateList)].pathCosts > popedCandList[getIndexOfNode(startNode,popedCandList)].pathCosts  + uSubDict[nextNode]:
             candidateList[getIndexOfNode(nextNode, candidateList)].pathCosts = popedCandList[getIndexOfNode(startNode,popedCandList)].pathCosts + uSubDict[nextNode]
-
-            candidateList[getIndexOfNode(nextNode, candidateList)].pathList = list(popedCandList[getIndexOfNode(startNode,popedCandList)].pathList)
+            candidateList[getIndexOfNode(nextNode, candidateList)].pathList  = list(popedCandList[getIndexOfNode(startNode,popedCandList)].pathList)
     except:
         pass
     
@@ -215,7 +214,7 @@ def findShortestPath(startNode):
     
     while len(candidateList)>0:
         try:
-            minCandidateFromList = candidateList.pop(getIndexOfNode(getMinCandidateId(), candidateList)) # firstloop
+            minCandidateFromList = candidateList.pop(getIndexOfNode(getMinCandidateId(), candidateList))
             if minCandidateFromList.idNumber == endNode:
                 minCandidateFromList.pathList.append(endNode)
                 break
