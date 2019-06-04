@@ -10,7 +10,6 @@ Created on Tue May 14 18:06:35 2019
 # to be considered beeing a valid
 # path.
 #
-#
 class Candidate:
     # attributes
     idNumber = 0
