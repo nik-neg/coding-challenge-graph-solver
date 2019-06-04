@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue May 14 18:06:35 2019
-
 @author: Alex
          This porgramm was written on Anaconda with Spyder 3.2.6 (Python 3.6)
 """
