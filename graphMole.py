@@ -54,10 +54,10 @@ def addAllNodes(setLength):
         node = str(dataKeyValue['nodes'][i-1]['label'].replace("node_", ""))
         if(node==startPattern):
             startNode = str(i-1)
-            node = str(dataKeyValue['nodes'][i-1]['label'].replace(startPattern, startNode))
+            node      = str(dataKeyValue['nodes'][i-1]['label'].replace(startPattern, startNode))
         if(node==endPattern):
             endNode = str(i-1)
-            node = str(dataKeyValue['nodes'][i-1]['label'].replace(endPattern, endNode))
+            node    = str(dataKeyValue['nodes'][i-1]['label'].replace(endPattern, endNode))
         graph.add_node(node)
     
     # add desired nodes for testing,
