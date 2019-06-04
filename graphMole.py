@@ -204,7 +204,6 @@ def updateNode(startNode, nextNode):
 # @param startNode
 #        The start node in the path.
 #
-#
 def findShortestPath(startNode):
     global candidateList
     global graph
@@ -214,11 +213,14 @@ def findShortestPath(startNode):
 
     
     nodeList = list(graph.nodes)
+    # check if start or end node even exist in the graph
     if (startNode or endNode) not in nodeList:
         minCandidateFromList.pathList  = str("NO PATH")
         minCandidateFromList.pathCosts = math.inf
         return
 
+    # check if the the adjacency of start or end node is empty
+    # so these nodes are isolated graph components
     if bool(not adjDict[startNode]) or bool(not adjDict[endNode]):
         minCandidateFromList.pathList  = str("NO PATH")
         minCandidateFromList.pathCosts = math.inf
