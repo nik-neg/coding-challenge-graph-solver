@@ -94,7 +94,7 @@ def genAdjDict():
     global graph
     adjacencyList = graph.adj
     for upperKey in adjacencyList:
-        subDict = adjacencyList.get(upperKey, "")
+        subDict       = adjacencyList.get(upperKey, "")
         returnSubDict = {}
         for key in subDict:
             returnSubDict[key] = subDict.get(key, "")['weight']
@@ -116,7 +116,7 @@ def getMinCandidateId():
     if len(candidateList)>0:
         for i in range (0, len(candidateList)):
             if minValue > candidateList[i].pathCosts:
-                minValue     = candidateList[i].pathCosts
+                minValue       = candidateList[i].pathCosts
                 minCandidateId = candidateList[i].idNumber
     return minCandidateId
 
