@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May  2 18:16:12 2019
-
 @author: Alex
          This porgramm was written on Anaconda with Spyder 3.2.6 (Python 3.6)
 """
 
 # Please make sure that the following imports of json, networkx and math
-# are available on your system.
+# are available on your system and the candidate.py class in the same folder
+# as graphMole.py file while running.
 
 # Project imports
 import json
@@ -50,6 +49,7 @@ def addAllNodes(setLength):
     global startNode
     global endNode
     global graph
+    global CODING_CHALLENGE
     for i in range(1,setLength+1):
         node = str(dataKeyValue['nodes'][i-1]['label'].replace("node_", ""))
         if(node==startPattern):
@@ -59,6 +59,16 @@ def addAllNodes(setLength):
             endNode = str(i-1)
             node = str(dataKeyValue['nodes'][i-1]['label'].replace(endPattern, endNode))
         graph.add_node(node)
+    
+    # add desired nodes for testing,
+    # therefore uncomment and add new node
+    # then set endNode to new node, add edges
+    # to new node if desired
+    # or just set endNode to a valid node
+    if not CODING_CHALLENGE:
+        #graph.add_node(str(1001))
+        #endNode = str(1001)
+        pass
 
 # Method to add all edges to the graph structure.
 #
@@ -201,9 +211,15 @@ def findShortestPath(startNode):
     global endNode
     global minCandidateFromList
     visitedList  = []
+
     
     nodeList = list(graph.nodes)
     if (startNode or endNode) not in nodeList:
+        minCandidateFromList.pathList  = str("NO PATH")
+        minCandidateFromList.pathCosts = math.inf
+        return
+
+    if bool(not adjDict[startNode]) or bool(not adjDict[endNode]):
         minCandidateFromList.pathList  = str("NO PATH")
         minCandidateFromList.pathCosts = math.inf
         return
@@ -261,7 +277,8 @@ def restoreData(shortestPathTuple):
 # To test other path just set the bool variable to False
 # and set the start node in the findShortestPath method
 # to str(node number), e.g.findShortestPath(str(399))
-# and the end node to "desired endnode", e.g. end node = "755"
+# and the end node to "desired valid endnode",
+# choose a valid end pattern e.g. endPattern = "755"
 CODING_CHALLENGE = True
 
 if __name__ == '__main__':
@@ -281,6 +298,7 @@ if __name__ == '__main__':
     else:
         print("Path : "+str(minCandidateFromList.pathList))
         print("Costs: "+str(minCandidateFromList.pathCosts))
+
     
     
 
