@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: Alex
-         This porgramm was written on Anaconda with Spyder 3.2.6 (Python 3.6)
+         This programm was written on Anaconda with Spyder 3.2.6 (Python 3.6)
 """
 
 # Please make sure that the following imports of json, networkx and math
