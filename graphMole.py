@@ -120,29 +120,29 @@ def getMinCandidateId():
                 minCandidateId = candidateList[i].idNumber
     return minCandidateId
 
-# Method to get the index of a candidate (node) in a list.
+# Method to get the index of a candidate (node) in a candidate list.
 #
 # @param: idNumber
 #         The idNumber of a candidate (node).
 # @return: i
 #          The index in some list.
-def getIndexOfNode(idNumber, someList):
-    if len(someList)>0:
-        for i in range(0, len(someList)):
-            if someList[i].idNumber == idNumber:
+def getIndexOfNode(idNumber, listOfCandidates):
+    if len(listOfCandidates)>0:
+        for i in range(0, len(listOfCandidates)):
+            if listOfCandidates[i].idNumber == idNumber:
                 return i
        
 # A method to check whether a
-# list contains a key or not.
+# candidate list contains a key or not.
 #
 # @param: key
 #         The key to be checked.
 #
 # @return: boolean
 #          If the list contains the key, True, else False.
-def listContainsKey(key, someList):
-    for i in range(0, len(someList)):
-        if key == someList[i].idNumber:
+def listContainsKey(key, listOfCandidates):
+    for i in range(0, len(listOfCandidates)):
+        if key == listOfCandidates[i].idNumber:
             return True
     return False
 
@@ -161,7 +161,7 @@ popedCandList = []
 # list, plus the current edge costs to the next node. If yes, than the path
 # costs of the next node member from the candidates list are updated to the lower
 # costs and the path is also updated to the path with the lower costs. The list
-# constructor is necessary to avoid different identifiers points to the same list.
+# constructor is necessary to avoid different identifiers pointing to the same list.
 #
 # @param: startNode
 #         The start node in the edge
