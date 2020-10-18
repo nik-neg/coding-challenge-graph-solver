@@ -124,8 +124,10 @@ def getMinCandidateId():
 #
 # @param: idNumber
 #         The idNumber of a candidate (node).
+#         listOfCandidates
+#         A list with candidates (nodes).
 # @return: i
-#          The index in some list.
+#          The index in some the list of candidates.
 def getIndexOfNode(idNumber, listOfCandidates):
     if len(listOfCandidates)>0:
         for i in range(0, len(listOfCandidates)):
@@ -137,9 +139,10 @@ def getIndexOfNode(idNumber, listOfCandidates):
 #
 # @param: key
 #         The key to be checked.
-#
+#         listOfCandidates
+#         A list with candidates (nodes).
 # @return: boolean
-#          If the list contains the key, True, else False.
+#          If the list of candidates contains the key, True, else False.
 def listContainsKey(key, listOfCandidates):
     for i in range(0, len(listOfCandidates)):
         if key == listOfCandidates[i].idNumber:
