@@ -1,2 +1,2 @@
-# coding_challenge_graph_solver
+# coding-challenge-graph-solver
 Shortest path algorithm for an undirected graph with positive weights.
